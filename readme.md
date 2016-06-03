@@ -36,16 +36,16 @@ If your team cannot directly enhance the framework, please make sure to contact 
 1. Start JMeter if it isn't already running:
  1. In a command prompt navigate to `JMETER_HOME\bin`.
  1. Run `jmeter.bat`.
-1. Open template.jmx included in the release.
+1. Open the `template.jmx` file included in the release.
 1. Update the following in JMeter:
  1. User Defined Variables (Test Plan and WorkBench) - change **BASE_URL** value to the correct site URL
  1. HTTP Request Defaults (Test Plan and WorkBench) - change **Server Name or IP** to the correct site URL.
  1. HTTP(S) Test Script Recorder - change **URL Patterns to Include** to correct site URL.  All periods in the middle of the URL must be escaped with a backslash '\'. Leave the .* at the beginning and end of URL.
 1. Start recording - click **Start** on HTTP(S) Test Script Recorder
-1. Install JMeter certificate
+1. Install the JMeter certificate
  1. Right click `JMETER_HOME\bin\ApacheJMeterTemporaryRootCA.crt` and click Install Certificate
  1. Follow Next > Place all certificates in the following store > **Trusted Root Certification Authorities** > Next > Finish > Yes > OK  
- 1. Configure browser to run through a proxy - Settings > Advanced > Change proxy settings<br />
+ 1. Configure browser to run through a proxy - Settings > Advanced > Change proxy settings >
  LAN settings > Use a proxy server for your LAN<br />
  **Address**: localhost<br />
  **Port**: 8090
@@ -58,9 +58,10 @@ If your team cannot directly enhance the framework, please make sure to contact 
  1. Navigate to the Actions tab.
  1. Click on an action.
  1. Complete the action.
-1. Stop Recording
+1. Stop Recording - click **Stop** on HTTP(S) Test Script Recorder
 1. Copy all of the created samples in the **Recording Controller** to the **Action (Test Fragment)**.
-1. You can now run the performance test again by clicking the green run arrow and view the results.
+1. You can now run the performance test again by clicking the green run arrow.
+1. View the results by clicking on **Graph Results**, **Summary Report**, or **View Results Tree**.
  
 ## Development Environment Setup ##
 
@@ -109,16 +110,15 @@ A new release can be prepared by completing the following steps:
 1. Create new release on https://github.com/appianps/ps-ext-AutomatedTestFramework/releases.
 
 As `mvn release:prepare` only commits the updated pom.xml files locally, they need to be pushed to GitHub the same as any other commit.
-The final release JAR's are placed in the `/target/` folder of each module.
+The final release Jar and Zip are placed in the `/target/` folder of each module.
 
 #### Create New Installation Package ####
 1. Run `mvn package`
 1. Upload new package to both the GitHub release and Share Component.
 1. Upload template.jmx to both the GitHub release and Share Component.
 
-If wanting to rebuild the customizations to the JMeter core components (to keep up with JMeter updates)
+How to rebuild the customizations to the JMeter core components (to keep up with JMeter updates):
 
-1. ApacheJMeter_http.jar and ApacheJMeter_components.jar
- 1. On the jmeter branch merge the most recent changes from jmeter trunk
- 1. run `ant`
- 1. Copy the resulting ApacheJMeter_http.jar and ApacheJMeter_components.jar from the lib/ext folder to the resources folder of the master branch.
+1. On the jmeter branch merge the most recent changes from jmeter trunk
+1. run `ant`
+1. Copy the resulting ApacheJMeter_http.jar and ApacheJMeter_components.jar from the lib/ext folder to the resources folder of the master branch.
