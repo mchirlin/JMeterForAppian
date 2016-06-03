@@ -4,7 +4,7 @@
 
     <groupId>com.appiancorp.ps.performancetest</groupId>
     <artifactId>jmeter-for-appian</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
 
     <name>JMeterForAppian</name>
     <url>https://github.com/appianps/ps-ext-AutomatedTestFramework</url>
@@ -12,7 +12,7 @@
 	<scm>
 	    <connection>scm:git:git://github.com/appianps/ps-ext-JMeterForAppian</connection>
 	    <url>https://github.com/appianps/ps-ext-JMeterForAppian</url>
-	    <tag>jmeter-for-appian-0.1.0</tag>
+	    <tag>v0.1.0</tag>
 	</scm>
 
     <properties>
