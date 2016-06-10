@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.1-SNAPSHOT.20160610">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -183,7 +183,8 @@
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port">8090</stringProp>
         <collectionProp name="ProxyControlGui.exclude_list">
-          <stringProp name="-1330403993">.*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff)</stringProp>
+          <stringProp name="-290009204">.*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|eot|ttf|svg|html|htc|xsl|xml|jpg) </stringProp>
+          <stringProp name="1809414749">.*\.gwt\.rpc</stringProp>
         </collectionProp>
         <collectionProp name="ProxyControlGui.include_list">
           <stringProp name="1072561604">.*example\.site\.com.*</stringProp>
