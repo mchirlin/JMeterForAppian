@@ -10,12 +10,12 @@ Using this plugin JMeter provides an "easy" way record and replay Appian process
 
 To use JMeter on your project, please follow the steps identified below for setting up the testing framework and creating/executing test cases.
 
-We ask that whenever possible, you contribute back to the repository and the Appian PS community by 
+We ask that whenever possible, you contribute back to the repository and the Appian PS community by:
 * adding any missing parameterization that's necessary
 * fixing issues and defects
 * implementing enhancements
 
-As we work and contribute to make this tool better, we will take the greatest care to ensure that the next versions are backwards compatible. Rest assure that whatever changes are released in the future are NOT going to break your test cases.
+As we work and contribute to make this tool better, we will take the greatest care to ensure that the next versions are backwards compatible. Rest assured that whatever changes are released in the future are NOT going to break your test cases.
 
 If your team cannot directly enhance the framework, please make sure to contact the Appian CoE on Home or over email in order to provide your feedback. 
 
