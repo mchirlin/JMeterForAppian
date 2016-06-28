@@ -73,7 +73,7 @@ If your team cannot directly enhance the framework, please make sure to contact 
 1. Add Git to PATH environment variable.
 
 #### Clone the GitHub Repo ####
-1. Clone the project repo to your local computer using `git clone git@github.com:appianps/ps-ext-JMeterForAppian.git`
+1. Clone the project repo to your local computer using `git clone git@github.com:mchirlin/ps-ext-JMeterForAppian.git`
 
 #### Eclipse Setup ####
 1. Setup the `M2_REPO` variable in Eclipse by running: `mvn eclipse:configure-workspace -Declipse.workspace="<your-eclipse-workspace>"`.
@@ -96,30 +96,3 @@ If your team cannot directly enhance the framework, please make sure to contact 
 1. Run `mvn verify` to run integration tests.
 1. Run `mvn clean package` (add `-DskipTests=true` to skip unit tests).
 1. Final JAR and Package are placed in the `/target/` folder.
-
-#### Release ####
-A new release can be prepared by completing the following steps:
-
-1. Run `mvn release:clean`.
-1. Run `mvn release:prepare -DpushChanges=false` add `-DdryRun=true` to perform the Maven release procedure without commiting changes to the local repository. Add `-Darguments="-DskipTests"` to skip integration tests. <br>**This step will automatically do the following:**
- * Updates the pom.xml files with the release version number
- * Commits the updated pom.xml files to the local git repository
- * Runs all unit & integration tests and build the final packages
- * Updates the pom.xml files with the next development version number
- * Commits the updated pom.xml files to the local git repository
-1. Push generated commits to GitHub.
-1. Create new release on https://github.com/appianps/ps-ext-AutomatedTestFramework/releases.
-
-As `mvn release:prepare` only commits the updated pom.xml files locally, they need to be pushed to GitHub the same as any other commit.
-The final release Jar and Zip are placed in the `/target/` folder of each module.
-
-#### Create New Installation Package ####
-1. Run `mvn package`
-1. Upload new package to both the GitHub release and Share Component.
-1. Upload template.jmx to both the GitHub release and Share Component.
-
-How to rebuild the customizations to the JMeter core components (to keep up with JMeter updates):
-
-1. On the jmeter branch, merge the most recent changes from `https://github.com/apache/jmeter.git` trunk.
-1. run `ant`.
-1. Copy the resulting `ApacheJMeter_http.jar` and `ApacheJMeter_components.jar` from the `lib/ext` folder to the resources folder of the master branch.
