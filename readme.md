@@ -73,7 +73,7 @@ If your team cannot directly enhance the framework, please make sure to contact 
 1. Add Git to PATH environment variable.
 
 #### Clone the GitHub Repo ####
-1. Clone the project repo to your local computer using `git clone git@github.com:mchirlin/ps-ext-JMeterForAppian.git`
+1. Clone the project repo to your local computer using `git clone git@github.com:mchirlin/JMeterForAppian.git`
 
 #### Eclipse Setup ####
 1. Setup the `M2_REPO` variable in Eclipse by running: `mvn eclipse:configure-workspace -Declipse.workspace="<your-eclipse-workspace>"`.
